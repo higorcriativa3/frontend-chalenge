@@ -1,0 +1,48 @@
+<div *ngIf="!charSlt" class="characters">
+  <div class="charList">
+      <div *ngFor="let char of chars?.results; index as i" (click)="sltChar(char)" class="charContainer" >
+        <div class="charsInfo">
+            <img [src]="imgUrl(idFromUrl(char.url))" alt="">
+            <div class="infoBox">
+              <h3>{{char.name}}</h3>
+              <span>Birth year: {{char.birth_year}}</span>
+            </div>
+        </div>
+      </div>
+      
+  </div>
+  <button class="btn-viewMore" *ngIf="chars?.count > chars?.results.length" (click)="getChars()">View more</button>
+</div>
+
+
+<div class="charDetails" *ngIf="charSlt">
+  <div class="charDetailsContainer card">
+      <img [src]="imgUrl(idFromUrl(charSlt.url))" alt="">
+      <div class="charDetails-info">
+          
+        <h3>{{charSlt.name}}</h3>
+        <div class="charDetailsInfoBox">
+            <div>
+                <p>Birth year: {{charSlt.birth_year}}</p>
+                <p>Eye color: {{charSlt.eye_color}}</p>
+                <p>Gender: {{charSlt.gender}}</p>
+                <p>Hair color: {{charSlt.hair_color}}</p>
+                <p>Height: {{charSlt.height}}</p>
+                <p>Mass: {{charSlt.mass}}</p>
+                <p>Skin color: {{charSlt.skin_color}}</p>
+            </div>
+            <div>
+                <p>Homeworld: {{plans?.name}}</p>
+                <p>Films:</p>
+                <p *ngFor="let film of films">{{film.title}}</p>
+                <p>Specie: {{specs?.name}}</p>
+            </div>
+        </div>
+        <a class="btn-close" (click)="close()"><img src="../../assets/images/icon-close.png" alt="Close"></a>
+      </div>
+  </div>
+</div>
+
+<div *ngIf="!chars" class="loading">
+  <img src="../../assets/images/millennium-falcon.gif" alt="Loading">
+</div>

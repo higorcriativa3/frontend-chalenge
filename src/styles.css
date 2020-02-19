@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'jedi';
+  src: url('assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: 'jedi-outline';
+  src: url('assets/fonts/Starjhol.ttf');
+}
+
+@font-face {
+  font-family: 'jedi-subtitle';
+  src: url('assets/fonts/Typo Grotesk Demo.otf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("http://www.ultradrive.com/images/rdx_starfield.jpg");
+  background-repeat: repeat;
+  background-size: 25vw 25vh ;
+
+}
