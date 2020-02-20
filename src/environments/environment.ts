@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+
+  /* Url da API */
   api: 'https://swapi.co/api/'
 };
 

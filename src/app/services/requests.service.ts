@@ -6,6 +6,8 @@ import { ResultsModel } from './resultsModel';
 @Injectable({
   providedIn: 'root'
 })
+
+/* Classe para receber a rota da API */
 export class RequestsService {
   API = environment.api;
   constructor(private http: HttpClient) { }

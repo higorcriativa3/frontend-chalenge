@@ -2,6 +2,9 @@
   width: 100%;
   padding: 20px;
   text-align: center;
+  border-bottom: 1px yellow solid;
+  margin-bottom: 37px;
+  background-color: black;
 }
 .nav img{
   width: 95px;

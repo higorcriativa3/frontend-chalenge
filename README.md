@@ -1,27 +1,23 @@
-# StarWars
+# Desafio Front End da mLearn
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+Projeto criado usando Angular na sua versão 9.0.2 consumindo a API SWAPI.
+link para api: https://swapi.co
 
-## Development server
+## Preparando o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Primeiro, verifique se contém o NPM instalado em sua máquina. Caso não, clique [aqui](https://nodejs.org) para baixar e instalar.
 
-## Code scaffolding
+Com o NPM já instalado, abra o terminal e instale o Angular CLI com o comando `npm install -g @angular/cli`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este projeto contém algumas dependências, por isso,  abra o terminal e navegue até a pasta onde fez o download deste projeto
+e rode o comando `npm install`. Isso irá instalar todas as dependências do projeto.
 
-## Build
+## Rodando a aplicação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ainda no terminal e na pasta do projeto, rode `ng serve`.
 
-## Running unit tests
+Em seu navegador, digite a URL `http://localhost:4200`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Obtendo ajuda
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para mais informações clique [aqui](https://github.com/angular/angular-cli/blob/master/README.md) e você irá acessar a documentação do Angular CLI.

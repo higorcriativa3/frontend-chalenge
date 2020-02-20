@@ -1,9 +1,13 @@
+.characters{
+  text-align: center;
+}
 .charList{
-  width: 70vw;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;  
   align-items: center;
+  justify-content: center;
   text-align: center;
   
 }
@@ -11,7 +15,7 @@
 .charContainer{
   color: white;
   text-align: center;
-  width: 30vw;
+  width: 350px;
   height: 70vh;
   margin: 30px;
   border-radius: 10px;
@@ -40,7 +44,7 @@
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  width: 50vw;
+  width: 370px;
   border-radius: 10px;
   border: 2px yellow solid;
   background-color: black;
@@ -75,4 +79,16 @@
 
 .btn-close img{  
   width: 45px;
+}
+
+.btnVwMore{
+  width: 200px;
+  font-size: 19px;
+  font-weight: bold;
+  box-shadow: none;
+  background-color: yellow;
+  border: none;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 100px;  
 }

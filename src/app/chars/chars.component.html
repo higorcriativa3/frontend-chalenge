@@ -1,3 +1,4 @@
+<!-- Lista os personagens em containers -->
 <div *ngIf="!charSlt" class="characters">
   <div class="charList">
       <div *ngFor="let char of chars?.results; index as i" (click)="sltChar(char)" class="charContainer" >
@@ -11,10 +12,10 @@
       </div>
       
   </div>
-  <button class="btn-viewMore" *ngIf="chars?.count > chars?.results.length" (click)="getChars()">View more</button>
+  <button class="btnVwMore" *ngIf="chars?.count > chars?.results.length" (click)="getChars()">View more</button>
 </div>
 
-
+<!-- Mostra os detalhes quando click no container -->
 <div class="charDetails" *ngIf="charSlt">
   <div class="charDetailsContainer card">
       <img [src]="imgUrl(idFromUrl(charSlt.url))" alt="">
@@ -41,8 +42,4 @@
         <a class="btn-close" (click)="close()"><img src="../../assets/images/icon-close.png" alt="Close"></a>
       </div>
   </div>
-</div>
-
-<div *ngIf="!chars" class="loading">
-  <img src="../../assets/images/millennium-falcon.gif" alt="Loading">
 </div>

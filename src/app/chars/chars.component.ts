@@ -9,6 +9,7 @@ import { ResultsModel } from '../services/resultsModel';
 })
 export class CharsComponent implements OnInit {
 
+  /* variávéis que serão populadas pela resposta da api */
   chars: ResultsModel;
   specs: any;
   plans: any;
@@ -22,10 +23,12 @@ export class CharsComponent implements OnInit {
     this.getChars();
   }
 
+  /* Encontra o id na URL */
   idFromUrl(url){
     return url.match(/([0-9])+/g)[0];
   }
 
+  /* Popula o array Chars[] com os personagens */
   getChars(){
     this.page++;
     this.request.doGet(`people/?page=${this.page}`).subscribe(data => {
@@ -33,12 +36,14 @@ export class CharsComponent implements OnInit {
     });
   }
 
+  /* Recebe a URL do template, encontra o id e busca o planeta no objeto */
   getPlan(urlPlan){
     this.request.doGet(`planets/${this.idFromUrl(urlPlan)}/`).subscribe(data =>{
       this.specs = data;
     });
   }
 
+  /* Recebe a URL do template, encontra o id, busca os planetas no objeto e popula o array plans[] */
   getFilms(films) {
     this.films = [];
     films.forEach(film => {
@@ -48,12 +53,14 @@ export class CharsComponent implements OnInit {
     })
   }
 
+  /* Recebe a URL do template, encontra o id e busca a espécie no objeto */
   getSpecs(urlSpecie){
     this.request.doGet(`species/${this.idFromUrl(urlSpecie)}/`).subscribe(data =>{
       this.specs = data;
     });
   }
 
+  /* Função que será disparada quando o personagem for clicado */
   sltChar(char){
     this.charSlt = char;
     this.getSpecs(this.charSlt.species[0]);
@@ -61,10 +68,12 @@ export class CharsComponent implements OnInit {
     this.getPlan(this.charSlt.homeworld);
   }
 
+  /* Recebe a ID do template e busca a imagem na pasta */
   imgUrl(id){
     return `../../assets/images/characters/${id}.jpg`;
   }
 
+  /* Função disparada ao clicar no botão de fechar */
   close(){
     this.charSlt = null;
     this.plans = null;

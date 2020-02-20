@@ -4,16 +4,6 @@
   src: url('assets/fonts/Starjedi.ttf');
 }
 
-@font-face {
-  font-family: 'jedi-outline';
-  src: url('assets/fonts/Starjhol.ttf');
-}
-
-@font-face {
-  font-family: 'jedi-subtitle';
-  src: url('assets/fonts/Typo Grotesk Demo.otf');
-}
-
 *{
   margin: 0;
   padding: 0;
