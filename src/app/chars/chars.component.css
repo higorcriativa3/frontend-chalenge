@@ -22,6 +22,7 @@
   border: 2px yellow solid;
   background-color: black;
   padding: 30px;
+  cursor: pointer;
 }
 
 .charContainer img{
@@ -75,6 +76,7 @@
   margin-top: 50px;
   position: relative;
   float: bottom;
+  cursor: pointer;
 }
 
 .btn-close img{  
